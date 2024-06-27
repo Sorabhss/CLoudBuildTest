@@ -39,7 +39,7 @@ data "google_compute_subnetwork" "test" {
 
 # Provision a compute instance
 module "test_instance" {
-  source = "../../module/VM/" #"git::https://gitlab.com/gitlab-com/demo-systems/terraform-modules/gcp/gce/gcp-compute-instance-tf-module.git"
+  source = "../../modules/VM/" #"git::https://gitlab.com/gitlab-com/demo-systems/terraform-modules/gcp/gce/gcp-compute-instance-tf-module.git"
   # source = "git::https://gitlab.com/gitlab-com/demo-systems/terraform-modules/gcp/gce/gcp-compute-instance-tf-module.git?ref=0.4.0"
 
   # Required variabless
