@@ -77,6 +77,6 @@ steps:
 
 # [END tf-apply]
 options:
-  defaultLogsBucketBehavior: 'buildlogbucketgcp'
+  defaultLogsBucketBehavior: 'gs://buildlogbucketgcp'
 
 serviceAccount: 'terraformgcp@terraformgcp-427004.iam.gserviceaccount.com'
