@@ -15,9 +15,13 @@ steps:
     args:
       - "-c"
       - |
-        if [ -d "environments/$BRANCH_NAME/" ]; then
-          cd environments/$BRANCH_NAME
-          terraform init
+        if [ "$$BRANCH_NAME" = "main"]; then
+          if [ -d "environments/dev" ]; then
+            cd environments/$BRANCH_NAME
+            terraform init
+          else
+            echo "Not Found"
+            exit 1
         else
           for dir in environments/*/
           do
