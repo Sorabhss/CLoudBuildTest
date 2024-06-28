@@ -15,8 +15,8 @@ steps:
     args:
       - "-c"
       - |
-        echo "$BRANCH_NAME"
-        if [ $BRANCH_NAME == "main"]; then
+        echo " Current branch: $BRANCH_NAME"
+        if [ "$BRANCH_NAME" = "main"]; then
           echo "Main Called"
           if [ -d "environments/dev" ]; then
             cd environments/$BRANCH_NAME
