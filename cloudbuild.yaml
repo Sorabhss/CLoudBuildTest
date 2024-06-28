@@ -16,7 +16,7 @@ steps:
       - "-c"
       - |
         echo "$BRANCH_NAME"
-        if [ $BRANCH_NAME = "main"]; then
+        if [ ["$BRANCH_NAME"== "main"]]; then
           echo "Main Called"
           if [ -d "environments/dev" ]; then
             cd environments/$BRANCH_NAME
