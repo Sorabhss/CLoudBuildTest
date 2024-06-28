@@ -22,6 +22,7 @@ steps:
           else
             echo "Not Found"
             exit 1
+          fi
         else
           for dir in environments/*/
           do
