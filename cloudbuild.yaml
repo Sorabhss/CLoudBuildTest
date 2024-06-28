@@ -51,7 +51,7 @@ steps:
           echo "Main Called"
           if [ -d "environments/dev" ]; then
             cd environments/dev
-            terraform plan
+            terraform plan -var-file="terraform.tfvars"
           else
             echo "Not Found"
             exit 1
